@@ -1,0 +1,24 @@
+ <?xml version="1.0" encoding="utf-8" standalone="no"?>
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl" dir="ltr">
+ <head>
+ <title>INFINITY v2.0</title>
+ <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=iso8990-2"/>
+ <meta http-equiv="Content-Language" content="pl"/>
+ <link rel="stylesheet" href="style.css" type="text/css" />
+ </head>
+ <body>
+<div id="center">
+	<div id="logo">
+		<div id="logonapis"><span id="logo">INFINITY</span>v2.0</div>
+		<div id="tagline"><span>LInuX | MUSIC | SHIT</span></div>
+	</div>
+<span>
+bal bla <br />
+<p class="black">aaa </p>
+Lorem ipsum dolor set... <br />
+<img src="wpbutton2.png" />
+</span></div>
+ </body>
+ </html>
+

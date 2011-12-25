@@ -1,0 +1,40 @@
+body {
+  background: #FFFF99;
+}
+
+div {
+  border: 0px #000 dashed;
+}
+
+#main {
+  margin: auto;
+  width: 900px;
+}
+
+#logo {
+  background: #CCFFFF;
+  height: 200px;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.ui-tabs .ui-tabs-hide {
+	display: none;
+}
+
+.ui-tabs-panel {
+	float: left;
+	background: #FF0000;
+  width: 898px;
+  border: 1px #000 solid;
+}
+
+#footer {
+  clear: both;
+}

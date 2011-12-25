@@ -1,0 +1,149 @@
+body {
+	background: #000000;
+	color: #ffffff;
+	font-family: sans-serif;
+	font-size: 10px;
+	}
+div {
+	border: 0px red dashed;
+	}
+a {
+	color: #fff;
+	}
+a:hover {
+	color: #f00;
+	}
+p {
+	margin: 0 2px 1em 0;
+	text-align: justify;
+	text-indent: 10px;
+	}
+img {
+	display: block;
+	margin: auto;
+	border: 0px;
+	}
+#center {
+	position: absolute;
+	left: 50%;
+	top: 45%;
+	margin-left: -500px;
+	margin-top: -200px;
+	width: 1000px;
+	height: 400px;
+	}
+/* KOMNUISCI */
+#lewa {
+	float: left;
+	width: 200px;
+	height: 400px;
+	max-height: 450px;
+	}
+#logo {
+	height: 40px;
+	text-align: center;
+	font-size: 35px;
+	color: #ff0000;
+	letter-spacing: -3px;
+	text-transform: uppercase;
+	padding: 0px 0px;
+	}
+#overlogo {
+	position: absolute;
+	width: 200px;
+	height: 40px;
+	top: 0px;
+	left: 0px;
+	background: url("../img/paski_overlay.png");
+	}
+#menu {
+	height: 290px;
+	padding: 0px 10px 10px 10px;
+	text-transform: uppercase;
+	font-size:10px;
+	font-family: sans-serif;
+	}
+.pasek {
+	border: 0px;
+	height: 5px;
+	margin: 3px 0 3px 0;
+	background: url("../img/stripes.png");
+	clear: both;
+	}
+ul.menu {
+	list-style-image: url("../img/list_arrows.png");
+	list-style-type: square;
+	padding: 0 0 0 20px;
+	margin: 5px;
+	}
+#stopka {
+	height: 60px;
+	padding: 0 10px;
+	text-transform: uppercase;
+	font-size:8px;
+	font-family: sans-serif;
+	text-align: center;
+	}
+/* PRAVICA */
+#prawa {
+	float: right;
+	width: 800px;
+	height: 400px;
+	}
+#photoblog {
+	width: 390px;
+	height: 390px;
+	float: right;
+	position: relative;
+	padding: 10px 5px 0px 5px;
+	}
+#blog {
+	width: 390px;
+	height: 390px;
+	float: left;
+	position: relative;
+	padding: 10px 5px 0px 5px;
+	}
+
+#post {
+	position: relative;
+	height: 328px;
+	width: 390px;
+	max-height: 328px;
+	overflow: auto;
+	font-size: 11px;
+	}
+.tytul {
+	font-size: 20px;
+	float: left;
+	}
+.meta {
+	float: left;
+	font-size: 13px;
+	}
+.koment {
+	float: right;
+	font-size: 13px;
+	}
+#fota {
+	overflow: hidden;
+	height: 319px;
+	vertical-align: center;
+	border: 5px white solid;
+	}
+img.fota {
+	max-height: 328px;
+	width: auto;
+	height: auto;
+	}
+#wiecej_fota {
+	position: absolute;
+	top: 330px;
+	right: 20px;
+	font-size: 22px;
+	background: url("../img/shade.png");
+	}
+.wiecej_post {
+	font-size: 15px;
+	text-align: right;
+	}

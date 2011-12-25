@@ -1,0 +1,315 @@
+/* $Id: admin.css 178 2008-06-23 19:16:35Z sunside $ */
+
+#grain-header {
+	font-size: 1em;
+}
+
+#grain-header .hibrowser {
+	width: 780px;
+	height: 260px;
+	overflow: scroll;
+}
+
+#grain-header #hitarget {
+	display: none;
+}
+
+#nonJsForm {
+	position: relative;
+	text-align: left;
+}
+
+#nonJsForm label.leftbound {
+	/* padding-top: 6px; */
+	padding-right: 5px;
+	float: left;
+	width: 200px;
+	text-align: right;
+}
+
+#grainoptions label.leftbound {
+	width: 150px;
+	display: block;
+	float: left;
+}
+
+#nonJsForm label.checkbox_text,
+#grainoptions  label.checkbox_text {
+	padding-top: none;
+	padding-right: none;
+	width: auto;
+	text-align: left;
+}
+
+#nonJsForm input,
+#nonJsForm textarea,
+#grainoptions input,
+#grainoptions textarea,
+.input_pad {
+	padding-top: 6px;
+	padding-right: 5px;
+	margin-left: 10px;
+	/*width: 200px;*/
+	text-align: left;
+}
+
+.input_pad {
+	padding-left: 205px;
+	padding-top: 0;
+	margin-top: 5px;
+}
+
+#grainoptions .input_pad {
+	padding-left: 140px;
+	padding-top: 0;
+	margin-top: 5px;
+}
+
+#nonJsForm textarea, #nonJsForm input,
+#grainoptions textarea, #grainoptions input {
+	font-family: "Courier New", Courier, monospace;
+}
+
+textarea {
+	width: 720px;
+}
+
+.defbutton {
+	font-weight: bold;
+}
+
+.zerosize {
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+}
+
+#nonJsForm hr {
+	border: none;
+	border-top: 1px dotted black;
+	margin: 10px 0;
+}
+
+#nonJsForm h2 {
+	padding-top: 20px;
+}
+
+#nonJsForm h2#first {
+	padding-top: 0px;
+}
+
+#nonJsForm fieldset {
+	border: 1px solid silver;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+#nonJsForm fieldset p {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+table {
+	width: 100%;
+}
+
+td.key {
+	width: 200px;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+td.value {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+input {
+	margin-right: 10px;	
+}
+
+input.checkbox {
+	margin-right: 5px;	
+}
+
+input.longline {
+	width: 400px;	
+}
+
+input.shortline {
+	width: 150px;	
+}
+
+span.quickinfo {
+	color: gray;	
+}
+
+div.description {
+	margin-bottom: 10px;
+}
+
+div.infoline {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+div.optionline {
+	margin-bottom: 5px;	
+}
+
+#nonJsForm fieldset,
+#graindiv fieldset {
+	border: none;
+	border-left: 1px dashed silver;
+	border-bottom: 1px dashed silver;
+	margin-top: 10px;
+	margin-left: -2px;
+	padding-left: 20px;
+}
+
+#nonJsForm fieldset legend,
+#graindiv fieldset legend {
+	font-size: 1.25em;
+	border-bottom: 1px dotted silver;
+	margin-bottom: 5px;
+}
+
+#atom_feed_line {
+	padding-top: 10px;	
+}
+
+#atom_feed_label {
+	background-image: url(../images/atom_gray.gif);
+	background-repeat: no-repeat;
+	background-position: 80px 0px;
+	height: 40px;
+	margin-top: -10px;
+	padding-top: 10px;
+}
+
+input.pixelbox {
+	width: 50px;
+}
+
+div.spacer {
+	padding-top: 10px;
+	margin-top: 10px;
+	border-top: 1px dashed #F0F0F0;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+
+div.ajaxloader {
+	display: inline;	
+	margin-left: 10px;
+	height: 16px;
+	position: relative;
+}
+
+div.ajaxloader img {
+	vertical-align: center;
+	top: 2px;
+	position: relative;
+}
+
+div.ajaxloader span.loading {
+	margin-left: 5px;
+}
+
+input.refreshbutton {
+	font-size: x-small;
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+.information {
+	background-color: #fff0c0;
+	border-color: #c00;
+	border-width: 1px;
+	border-style: solid;
+	padding: 0px 10px;
+}
+
+.information a {
+	color: #c00;
+}
+
+#dev-filename {
+	margin-left: 10px;
+	position: relative;
+	top: 5px;
+	padding: 2px;
+	border: 1px solid silver;
+	background: white;
+	width: auto;
+}
+
+#logging-state .enabled,
+#logging-state .disabled {
+	border-bottom: 1px solid;
+}
+
+#logging-state .enabled {
+	/*color: #cc0000; */
+	font-weight: bold;
+}
+
+p.current {
+	padding-bottom: 10px;
+	border-bottom: 1px dashed silver;
+}
+
+#grain-version, #yapb-version {
+	font-family: monospace;
+}
+
+div.grain-options-block {
+	margin: 5px;
+	border: 1px solid #f0f0f0;
+	position: relative;
+	/*height: 80px;*/
+	/*background: url(../images/grid3.png);
+	color: white;*/
+}
+
+div.grain-options-block div {
+	padding: 5px;
+	/*position: relative;*/
+}
+
+div.grain-options-block div.option-name {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 220px;
+	height: 40px;
+	/*background: #f0f0ff;*/
+	font-size: larger;
+	padding-left: 10px;
+	padding-right: 5px;
+	/*border-right: 1px solid silver;*/
+	/*background: url(../images/grid.gif);*/
+}
+
+div.grain-options-block div.option-description {
+	/*width: 500px;*/
+	position: absolute;
+	left: 240px;
+	top: 0px;
+	height: 50px;
+	padding-right: 10px;
+}
+
+div#grain-options-info-inner {
+	padding: 10px 0px;
+}
+
+div#happy-photoblogging {
+	padding-bottom: 20px;
+}
+
+#logging-state-text {
+	cursor: pointer;
+}

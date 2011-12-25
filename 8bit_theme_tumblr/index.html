@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>{Title}</title>
+      <link rel="shortcut icon" href="{Favicon}">
+      <link rel="alternate" type="application/rss+xml" href="{RSS}">
+      {block:Description}
+         <meta name="description" content="{MetaDescription}" />
+      {/block:Description}
+      <link rel="stylesheet" href="http://static.tumblr.com/hwsfayd/eeilnt89v/amiga4ever.css" type="text/css" />
+      <link rel="stylesheet" href="http://static.tumblr.com/hwsfayd/qZ8lnt8aj/pressstart2p.css" type="text/css" />
+
+      <!--Custom-->
+      <meta name="if:Show About" content="1" />
+      <meta name="if:Show Avatar" content="1" />
+      <meta name="if:Show Buttons" content="1" />
+      <meta name="if:Show Search" content="1" />
+      <meta name="if:Show Pages" content="1" />
+      <meta name="if:Show Following" content="1" />
+      <meta name="if:Show RSS Button" content="1" />
+      <meta name="if:Fixed Sidebar" content="1" />
+
+      <meta name="text:Tumblr URL" content="" />
+      <meta name="text:Email Address" content="" />
+      <meta name="text:Facebook Short URL" content="" />
+      <meta name="text:Twitter Username" content="" />
+      <meta name="text:Youtube Channel URL" content="" />
+      <meta name="text:Flickr Username" content="" />
+      <meta name="text:Deviantart Username" content="" />
+      <meta name="text:Google Analytics ID" content="" />
+      <meta name="text:Disqus Shortname" content="" />
+      <!--End Custom-->
+      <meta http-equiv="x-dns-prefetch-control" content="off"/>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <style type="text/css">
+       /* Main Things */
+         body {
+            background: #000 url('http://static.tumblr.com/hwsfayd/maLlnt68m/bg_lines.png') fixed;
+            display: block;
+            margin: 0;
+            padding: 0;
+         }
+         ul, ol {
+            list-style: none;
+         }
+         a {
+            color: #f00;
+            text-decoration: underline;
+         }
+         img {
+            border: 0px;
+         }
+         .inlineblock {
+            display: -moz-inline-stack;
+            display: inline-block;
+            *display: inline;
+         }
+         .floatleft {
+            float: left;
+         }
+         .floatright {
+            float: right;
+         }
+         #wrapper {
+            width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+         }
+         /* Side Bar */
+         .stripeheader {
+            background: url('http://static.tumblr.com/hwsfayd/IU0lnt6cd/nav_h3_bg.png') repeat-x;
+            margin-top: 10px;
+            padding-top: 11px;
+         }
+         .sidebar {
+            font-family: AmigaForeverRegular;
+            font-size: 8px;
+            clear: both;
+         }
+         #sidebar {
+            width: 300px;
+            {block:IfFixedSidebar}
+            position: fixed;
+            {/block:IfFixedSidebar}
+            float: left;
+            font-family: PressStart2PRegular;
+            color: #fff;
+            text-align: center;
+         }
+         #sidebar h1 {
+            color: #f00;
+            font-size: 32px;
+            text-align: center;
+            letter-spacing: -5px;
+            margin-bottom: 0px;
+         }
+         #sidebar h1 a {
+            text-decoration: none;
+         }
+         #sidebar h3 {
+            text-align: left;
+            font-size: 16px;
+            padding-left: 20px;
+            margin: 0;
+         }
+         #sidebar img {
+            border: 0px;
+         }
+         #about {
+            padding: 5px;
+            text-align: justify;
+         }
+         #about img {
+            float: left;
+            clear: left;
+            padding: 0px 3px 0px 0px;
+            margin-right: 4px;
+         }
+         #about p {
+            margin: 0px;
+         }
+         #buttons img {
+            margin: 5px;
+         }
+         #search input {
+            background: #000;
+            color: #fff;
+            font-family: AmigaForeverRegular;
+            font-size: 8px;
+            border: 2px solid #fff;
+            margin: 0 1px;
+         }
+         #pages ul {
+            margin: 0px;
+            padding: 0 0 0 8px;
+            font-size: 8px;
+         }
+         #pages li {
+            background: url('http://static.tumblr.com/hwsfayd/1vAlnt687/arrow.png') no-repeat;
+            background-position: 0px 1px;
+            padding-left: 10px;
+            margin-top: 5px;
+            border-bottom: 2px dashed #400;
+            text-align: left;
+         }
+         #pages a {
+            text-decoration: none;
+         }
+#following img {
+margin: 4px;
+}
+         #credits {
+            background: url('http://static.tumblr.com/hwsfayd/IU0lnt6cd/nav_h3_bg.png') repeat-x;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 10px;
+            color: #444;
+            font-size: 8px;
+         }
+         #credits a {
+            color: #600;
+         }
+
+         /* Main wrapper */
+         #main {
+            float: right;
+            font-family: AmigaForeverRegular;
+            font-size: 8px;
+            width: 690px;
+            height: 100%;
+            padding: 20px 0;
+            overflow: hidden;
+            color: #fff;
+         }
+
+         /* text post */
+         .post_heading {
+            background: url('http://static.tumblr.com/hwsfayd/rYrlnt6bf/heading_bg.png') repeat-x;
+            padding-top: 8px;
+            width: 100%;
+         }
+         .title {
+            float: left;
+            width: 390px;
+         }
+         .meta {
+            float: right;
+            text-align: right;
+            width: 300px;
+         }
+         .centercontent {
+            text-align: center;
+         }
+         .post_content {
+            background: url('http://static.tumblr.com/hwsfayd/rYrlnt6bf/heading_bg.png') repeat-x;
+            padding-top: 4px;
+         }
+         .post_content p {
+            margin-top: 2px;
+         }
+         .quote {
+            font-size: 16px;
+            text-align: right;
+            margin-top: 10px;
+         }
+         .post {
+            margin-bottom: 20px;
+         }
+         .exif {
+            text-align: right;
+         }
+         .photo_post img {
+            border: 0px;
+         }
+         .link_post {
+            font-size: 16px;
+            text-align: center;
+            margin-top: 2px;
+            margin-bottom: 8px;
+         }
+         .chat_post {
+            padding-top: 10px;
+            padding-left: 10px;
+         }
+         #navigation {
+            padding-top: 8px;
+            font-size: 16px;
+
+            width: 100%;
+            background: url('http://static.tumblr.com/hwsfayd/rYrlnt6bf/heading_bg.png') repeat-x;
+         }
+         #navigation a {
+            text-decoration: none;
+         }
+         #prev_page {
+            float: left;
+         }
+         #next_page {
+            float: right;
+         }
+         /* notes */
+         ol.notes {
+                padding: 0px;
+                margin: 25px 0px;
+                list-style-type: none;
+                border-bottom: solid 2px #fee;
+            }
+
+            ol.notes li.note {
+                border-top: solid 2px #fee;
+                padding: 10px;
+            }
+
+            ol.notes li.note img.avatar {
+                vertical-align: -4px;
+                margin-right: 10px;
+                width: 16px;
+                height: 16px;
+            }
+
+            ol.notes li.note span.action {
+                font-weight: bold;
+            }
+
+            ol.notes li.note .answer_content {
+                font-weight: normal;
+            }
+
+            ol.notes li.note blockquote {
+                border-color: #eee;
+                padding: 4px 10px;
+                margin: 10px 0px 0px 25px;
+            }
+
+            ol.notes li.note blockquote a {
+                text-decoration: none;
+            }
+
+         {CustomCSS}
+      </style>
+   </head>
+   <body>
+      <div id="wrapper">
+         <!--Sidebar-->
+         <div id="sidebar">
+            <h1><a href="{text:Tumblr URL}">{Title}</a></h1>
+            {block:IfShowAbout}
+            <div id="about" class="sidebar inlineblock">
+               {block:IfShowAvatar}
+               <img src="{PortraitURL-128}" class="avatar" />
+               {/block:IfShowAvatar}
+               {block:Description}
+               <p class="floatright">{Description}</p>
+               {/block:Description}
+            </div>
+            {/block:IfShowAbout}
+            {block:IfShowButtons}
+            <div id="buttons" class="sidebar inlineblock">
+               {block:IfShowRSSButton}
+               <a href="{RSS}"><img src="http://static.tumblr.com/hwsfayd/6gTlnt6d4/rss.png" onmouseover="this.src='http://static.tumblr.com/hwsfayd/Cv3lnt6ct/rss_hover.png'" onmouseout="this.src='http://static.tumblr.com/hwsfayd/6gTlnt6d4/rss.png'" class="floatleft" alt="RSS" /></a>
+               {/block:IfShowRSSButton}
+               {block:IfEmailAddress}
+               <a href="mailto:{text:Email Address}"><img src="http://static.tumblr.com/hwsfayd/yTllnt6c3/mail.png" onmouseover="this.src='http://static.tumblr.com/hwsfayd/Rgmlnt6bs/mail_hover.png'" onmouseout="this.src='http://static.tumblr.com/hwsfayd/yTllnt6c3/mail.png'" class="floatleft" alt="Mail Me"/></a>
+               {/block:IfEmailAddress}
+               {block:IfFacebookShortURL}
+               <a href="{text:Facebook Short URL}" target="_blank"><img src="http://static.tumblr.com/hwsfayd/XKclnt6a8/facebook.png" onmouseover="this.src='http://static.tumblr.com/hwsfayd/1YPlnt69x/facebook_hover.png'" onmouseout="this.src='http://static.tumblr.com/hwsfayd/XKclnt6a8/facebook.png'" class="floatleft" alt="My Facebook"/></a>
+               {/block:IfFacebookShortURL}
+               {block:IfTwitterUsername}
+               <a href="http://twitter.com/{text:Twitter Username}" target="_blank"><img src="http://static.tumblr.com/hwsfayd/wablnt6du/twitter.png" onmouseover="this.src='http://static.tumblr.com/hwsfayd/UnKlnt6df/twitter_hover.png'" onmouseout="this.src='http://static.tumblr.com/hwsfayd/wablnt6du/twitter.png'" class="floatleft" alt="My Twitter" /></a>
+               {/block:IfTwitterUsername}
+               {block:IfYoutubeChannelURL}
+               <a href="{text:Youtube Channel URL}" target="_blank"><img src="http://static.tumblr.com/hwsfayd/iYzlnt6ef/youtube.png" onmouseover="this.src='http://static.tumblr.com/hwsfayd/Ad0lnt6e5/youtube_hover.png'" onmouseout="this.src='http://static.tumblr.com/hwsfayd/iYzlnt6ef/youtube.png'" class="floatleft" alt="My Youtube Channel"/></a>
+               {/block:IfYoutubeChannelURL}
+               {block:IfFlickrUsername}
+               <a href="http://flickr.com/{text:Flickr Username}" target="_blank"><img src="http://static.tumblr.com/hwsfayd/s5ylnt6b0/flickr.png" onmouseover="this.src='http://static.tumblr.com/hwsfayd/prhlnt6ap/flickr_hover.png'" onmouseout="this.src='http://static.tumblr.com/hwsfayd/s5ylnt6b0/flickr.png'" class="floatleft" alt="My Flickr"/></a>
+               {/block:IfFlickrUsername}
+               {block:IfDeviantartUsername}
+               <a href="http://{text:Deviantart Username}.devinatart.com" target="_blank"><img src="http://static.tumblr.com/hwsfayd/bBylnt69d/deviantart.png" onmouseover="this.src='http://static.tumblr.com/hwsfayd/xISlnt690/deviantart_hover.png'" onmouseout="this.src='http://static.tumblr.com/hwsfayd/bBylnt69d/deviantart.png'" class="floatleft" alt="My Deviantart"/></a>
+               {/block:IfDeviantartUsername}
+            </div>
+            {/block:IfShowButtons}
+            {block:IfShowSearch}
+            <div id="search" class="stripeheader">
+               <h3>Search:</h3>
+               <form action="http://safe.tumblr.com/search" method="get">
+                  <input type="text" class="search-query" name="q" size="25" value="{SearchQuery}" /><input type="submit" class="search-button" value="Find"/>
+               </form>
+            </div>
+            {/block:IfShowSearch}
+            {block:IfShowPages}
+            <div id="pages" class="stripeheader">
+               <h3>Pages</h3>
+                  <ul>
+                     <li><a href="/archive">Archive</a></li>
+                     {block:HasPages}
+                     {block:Pages}
+                     <li><a href="{URL}">{Label}</a></li>
+                     {/block:Pages}
+                     {/block:HasPages}
+                  </ul>
+            </div>
+            {/block:IfShowPages}
+            {block:IfShowFollowing}
+            {block:Following}
+            <div id="following" class="stripeheader">
+               <h3>Following</h3>
+               {block:Followed}<a href="{FollowedURL}" target="_blank"><img src="{FollowedPortraitURL-40}" /></a>{/block:Followed}
+            </div>
+            {/block:Following}
+            {/block:IfShowFollowing}
+            <div id="credits" class="stripeheader">
+               Theme .8bit created by <a href="http://bitdata.tumblr.com/">L0ner</a>.<br >
+               Powered by <a href="http://tumblr.com/" target="_blank">tumblr.com</a>
+            </div>
+         </div>
+         <!--End Sidebar-->
+         <!--Main-->
+         <div id="main">
+            {block:Posts}
+            <!--Post-->
+            <div class="post">
+               <!--post head-->
+               <div class="inlineblock post_heading">
+                  <div class="title">
+                     {block:Date}{DayOfMonthWithZero}-{MonthNumberWithZero}-{Year}, {24HourWithZero}:{Minutes}{/block:Date} : content-type: {PostType}<br />
+                     {block:Title}
+                     <a href="{Permalink}">{Title}</a>
+                     {/block:Title}
+                  </div>
+                  <div class="meta">
+                     <a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a><br />
+                     {block:HasTags}Tags: {block:Tags}<a href="{TagURL}">{Tag}</a>, {/block:Tags} {/block:HasTags}
+                  </div>
+               </div>
+               <!--end post head-->
+               <!--post content-->
+               <!--text post-->
+               {block:Text}
+               <div class="post_content text_post">
+                  {Body}
+               </div>
+               {/block:Text}
+               <!--text post-->
+
+               <!--photo post-->
+               {block:Photo}
+               <div class="post_content centercontent">
+                  <a href="{PhotoURL-HighRes}" target="_blank"><img src="{PhotoURL-HighRes}" width="690" /></a>
+                  {block:Caption}{Caption}{/block:Caption}
+                  {block:Exif}
+                  <div class="exif">
+                     Exif:<br />
+                     {block:Camera}
+                       Camera: {Camera}<br />
+                     {/block:Camera}
+                     {block:Aperture}
+                       Aperture: {Aperture}<br />
+                     {/block:Aperture}
+                     {block:Exposure}
+                        Exposure: {Exposure}<br />
+                     {/block:Exposure}
+                     {block:FocalLength}
+                        Focal Length: {FocalLength}<br />
+                     {/block:FocalLength}
+                  </div>
+                  {/block:Exif}
+               </div>
+               {/block:Photo}
+               <!--photo post-->
+
+               <!--photoset post-->
+               {block:Photoset}
+               <div class="centercontent post_content">
+                  {Photoset}
+                  {block:Caption}{Caption}{/block:Caption}
+               </div>
+               {/block:Photoset}
+               <!--photoset post-->
+
+               <!--quote post-->
+               {block:Quote}
+               <div class="post_content">
+                  <p class="quote">"{Quote}"</p>
+                  {block:Source}{Source}{/block:Source}
+               </div>
+               {/block:Quote}
+               <!--quote post-->
+
+               <!-- link post-->
+               {block:Link}
+               <div class="post_content">
+                  <div class="link_post"><a href="{URL}" {Target}>{Name}</a></div>
+                  {block:Description}{Description}{/block:Description}
+               </div>
+               {/block:Link}
+               <!--link post-->
+
+               <!--chat post-->
+               {block:Chat}
+               <div class="post_content chat_post">
+                  <ul>
+                     {block:Lines}<li>{block:Label}{Label}{/block:Label}: {Line}</li>{/block:Lines}
+                  </ul>
+               </div>
+               {/block:Chat}
+               <!--chat post-->
+
+               <!--audio post-->
+               {block:Audio}
+               <div class="post_content centercontent">
+                     {block:AlbumArt}
+                        <a href="{AlbumArtURL}" target="_blank"><img src="{AlbumArtURL}" width="300" /></a><br />
+                     {/block:AlbumArt}
+                        {block:TrackName}Title: {TrackName}<br />{block:TrackName}
+                        {block:Artist}Artist: {Artist}<br />{/block:Artist}
+                        {block:Album}Album: {Album}<br />{/block:Album}
+                        {AudioPlayerBlack}<br />
+                        Played: {PlayCountWithLabel}<br />
+                        {block:ExternalAudio}<a href="{ExternalAudioURL}">Download!</a>{/block:ExternalAudio}
+                     {block:Caption}{Caption}{/block:Caption}
+               </div>
+               {/block:Audio}
+               <!--audio post-->
+
+               <!--video post-->
+               {block:Video}
+               <div class="post_content centercontent">
+                  {Video-500}
+                  {block:Caption}{Caption}{/block:Caption}
+               </div>
+               {/block:Video}
+               <!--video post-->
+               <!--end post content-->
+               <!--notes & comments-->
+               {block:PostNotes}
+               <div class="notes">
+                  {PostNotes}
+               </div>
+               {/block:PostNotes}
+
+            </div>
+            {/block:Posts}
+            <script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>{block:Permalink}<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /**
+    * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread]
+    */
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = 'http://bitdata.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=bitdata">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+{/block:Permalink}<script type="text/javascript">
+var disqus_shortname = 'bitdata';
+(function () {
+  var s = document.createElement('script'); s.async = true;
+  s.src = 'http://bitdata.disqus.com/count.js';
+  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+            <!--post-->
+            <!--pages footer-->
+            {block:Pagination}
+            <div id="navigation" class="inlineblock">
+               {block:PreviousPage}
+               <div id="prev_page"><a href="{PreviousPage}">&lt;&lt;Previous page</a></div>
+               {/block:PreviousPage}
+               {block:NextPage}
+               <div id="next_page"><a href="{NextPage}">Next page&gt;&gt;</a></div>
+               {/block:NextPage}
+            </div>
+            {/block:Pagination}
+            <!--end pages footer-->
+         </div>
+         <!--End Main-->
+      </div>
+   </body>
+</html>

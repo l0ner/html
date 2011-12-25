@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" href="files/style.css" type="text/css" />
+		<script type="text/javascript" src="files/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="files/jquery-ui-1.8.1.custom.min.js"></script>
+		<title>Generic XHTML page</title>
+		<script type="text/javascript">
+		var options = {};
+			$(function() {
+			  $("#tabs").tabs({
+				  ajaxOptions: {
+					  error: function(xhr, status, index, anchor) {
+						  $(anchor.hash).html("Couldn't load this tab. We'll try to fix this as soon as possible. If this wouldn't be a demo.");
+							}
+					}
+					load: effect(selectedEffect,options,500,callback);
+				});
+			});
+			
+		// when the DOM is ready...
+$(document).ready(function () {
+
+var $panels = $('#tabs');
+var $container = $('.ui-tabs-panel');
+
+// if false, we'll float all the panels left and fix the width 
+// of the container
+var horizontal = true;
+
+// float the panels left if we're going horizontal
+if (horizontal) {
+  $panels.css({
+    'float' : 'left',
+    'position' : 'relative' // IE fix to ensure overflow is hidden
+  });
+  
+  // calculate a new width for the container (so it holds all panels)
+  $container.css('width', $panels[0].offsetWidth * $panels.length);
+}
+
+// collect the scroll object, at the same time apply the hidden overflow
+// to remove the default scrollbars that will appear
+var $scroll = $('#tabs .scroll').css('overflow', 'hidden');
+
+
+// handle nav selection
+function selectNav() {
+  $(this)
+    .parents('ul:first')
+      .find('a')
+        .removeClass('selected')
+      .end()
+    .end()
+    .addClass('selected');
+}
+
+$('#slider .navigation').find('a').click(selectNav);
+
+// go find the navigation link that has this target and select the nav
+function trigger(data) {
+  var el = $('#tabs .navigation').find('a[href$="' + data.id + '"]').get(0);
+  selectNav.call(el);
+}
+
+if (window.location.hash) {
+  trigger({ id : window.location.hash.substr(1) });
+} else {
+  $('ul.navigation a:first').click();
+}
+
+// offset is used to move to *exactly* the right place, since I'm using
+// padding on my example, I need to subtract the amount of padding to
+// the offset.  Try removing this to get a good idea of the effect
+var offset = parseInt((horizontal ? 
+  $container.css('paddingTop') : 
+  $container.css('paddingLeft')) 
+  || 0) * -1;
+
+
+var scrollOptions = {
+  target: $scroll, // the element that has the overflow
+  
+  // can be a selector which will be relative to the target
+  items: $panels,
+  
+  navigation: '.navigation a',
+  
+  // selectors are NOT relative to document, i.e. make sure they're unique
+  prev: 'img.left', 
+  next: 'img.right',
+  
+  // allow the scroll effect to run both directions
+  axis: 'xy',
+  
+  onAfter: trigger, // our final callback
+  
+  offset: offset,
+  
+  // duration of the sliding effect
+  duration: 500,
+  
+  // easing - can be used with the easing plugin: 
+  // http://gsgd.co.uk/sandbox/jquery/easing/
+  easing: 'swing'
+};
+
+// apply serialScroll to the slider - we chose this plugin because it 
+// supports// the indexed next and previous scroll along with hooking 
+// in to our navigation.
+$('#tabs').serialScroll(scrollOptions);
+
+// now apply localScroll to hook any other arbitrary links to trigger 
+// the effect
+$.localScroll(scrollOptions);
+
+// finally, if the URL has a hash, move the slider in to position, 
+// setting the duration to 1 because I don't want it to scroll in the
+// very first page load.  We don't always need this, but it ensures
+// the positioning is absolutely spot on when the pages loads.
+scrollOptions.duration = 1;
+$.localScroll.hash(scrollOptions);
+
+});
+		
+		</script>
+	</head>
+	<body>
+		<div  id="main">
+			<div id="logo">Here goes logo</div>
+			<div id="tabs">
+				<ul>
+					<li><a href="#tabs-1">Preloaded</a></li>
+					<li><a href="files/content1.html">Tab 1</a></li>
+					<li><a href="files/content2.html">Tab 2</a></li>
+				</ul>
+				<div id="tabs-1"><p>Content</p></div>
+			</div>
+			<div id="footer">Here goes footer</div> 
+		</div>
+	</body>
+</html>

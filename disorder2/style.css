@@ -1,0 +1,31 @@
+html, body {
+	background: #fff;
+	height: 99%;
+	}
+div {
+	border: 1px red dashed;
+	}
+#logo {
+	width: 43px;
+	height: 100%;
+	background: #fff url("img/logo.jpg") no-repeat;
+	float: left;
+	}
+#main {
+	height: 99%;
+	background: #7a7a7a;
+	float: right;
+	}
+#menu {
+	width: 150px;
+	background: #5a5a5a;
+	float: left;
+	}
+#post { 
+	width: 80%;
+	height: 100%;
+	max-height: 100%;
+	background: #6B6B6B;
+	overflow: auto;
+	float: right;
+	}

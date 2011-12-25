@@ -1,0 +1,83 @@
+               <!--text post-->
+               {block:Text}
+               <div class="post_content text_post">
+                  {Body}
+               </div>
+               {/block:Text}
+               <!--text post-->
+
+               <!--photo post-->
+               {block:Photo}
+               <div class="post_content photo_post">
+                  <a href="{PhotoURL-HighRes}" target="_blank"><img src="{PhotoURL-HighRes}" width="690" /></a>
+                  {block:Caption}{Caption}{/block:Caption}
+                  <div class="exif">
+                     Exif:<br />
+                     Sony A200 + Sigma DG 70-300<br />
+                     Exposure: 1/80s @ f/5,6<br />
+                     ISO Speed: ISO100<br />
+                     Focal: 300mm<br />
+                     Taken: 13-11-2009<br />
+                  </div>
+               </div>
+               {/block:Photo}
+               <!--photo post-->
+               
+               <!--photoset post-->
+               {block:Photoset}
+               <div class="photo_post post_content">
+                  {Photoset}
+                  {block:Caption}{Caption}{/block:Caption}
+               </div>
+               {/block:Photoset}
+               <!--photoset post-->
+               
+               <!--quote post-->
+               {block:Quote}
+               <div class="post_content">
+                  <p class="quote">"{Quote}"</p>
+                  {block:Source}{Source}{/block:Source}
+               </div>
+               {/block:Quote}
+               <!--quote post-->
+               
+               <!-- link post-->
+               {block:Link}
+               <div class="post_content">
+                  <div class="link_post"><a href="{URL}" {Target}>{Name}</a></div>
+                  {block:Description}{Description}{/block:Description}
+               </div>
+               {/block:Link}
+               <!--link post-->
+               
+               <!--chat post-->
+               {block:Chat}
+               <div class="post_content chat_post">
+                  <div class="line odd"><strong>A1:</strong> daodlawjd</div>
+                  <div class="line even"><strong>A2:</strong> adlwijdalwij</div>
+                  <div class="line odd"><strong>A1:</strong> daliwdjald</div>
+                  <div class="line even"><strong>A2:</strong> dadoij93p</div>
+                  <div class="line odd"><strong>A3:</strong> d33d</div>
+                  <div class="line even"><strong>A1:</strong> ceosi3</div>
+                  <div class="line odd"><strong>A2:</strong> dp93oajpd</div>
+               </div>
+               {/block:Chat}
+               <!--chat post-->
+               
+               <!--audio post-->
+               {block:Audio}
+               <div class="post_content audio_post">
+                  {AudioPlayerBlack}
+                  {block:Caption}{Caption}{/block:Caption}
+               </div>
+               {/block:Audio}
+               <!--audio post-->
+               
+               <!--video post-->
+               {block:Video}
+               <div class="post_content video_post">
+                  {Video-500}
+                  {block:Caption}{Caption}{/block:Caption}
+               </div>
+               {/block:Video}
+               <!--video post-->

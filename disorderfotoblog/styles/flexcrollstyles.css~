@@ -1,0 +1,75 @@
+/* Scroll Bar Master Styling Starts Here */
+/* All comments can be freely removed from the css */
+
+.scrollgeneric {
+line-height: 1px;
+font-size: 1px;
+position: absolute;
+top: 0; left: 0;
+}
+
+.vscrollerbase {
+width: 10px;
+background-color: white;
+}
+.vscrollerbar {
+width: 4px;
+background-color: black;
+margin: 0 3px;
+padding: 10px;
+}
+.hscrollerbase {
+height: 10px;
+background-color: white;
+}
+.hscrollerbar {
+height: 4px;
+background-color: black;
+margin: 0 3px;
+padding: 10px;
+}
+
+.scrollerjogbox {
+width: 10px;
+height: 10px;
+top: auto; left: auto;
+bottom: 0px; right: 0px;
+background-color: gray;
+}
+
+
+.vscrollerbasebeg {
+/* Top image holder for vertical scrollbar*/
+background: url(../img/scrollbar_arrows.png) 0px 0px no-repeat;
+width: 10px;
+/* Height of this class is normally set by the script, to fit the scrollbar, but Webkit (Safari's rendering
+engine) currently has a bug on no-repeat for negatively positioned backgrounds, causing the top
+image to repeat on certain sizes. In this style, we do not need our script to strech the
+vscrollerbarbeg, so we can fix the problem by forcing the size using CSS with an !important decleration: */
+height: 10px !important;
+}
+
+.vscrollerbaseend {
+/* Bottom image holder for vertical scrollbar*/
+background: url(../img/scrollbar_arrows.png) -10px 0px no-repeat;
+width: 10px;
+height: 10px;
+}
+
+.hscrollerbasebeg {
+/* Left image holder for horizontal scrollbar */
+background: url(../img/scrollbar_arrows.png) 0px -5px no-repeat;
+height: 10px;
+/* Width of this class is normally set by the script, to fit the scrollbar, but Webkit (Safari's rendering
+engine) currently has a bug on no-repeat for negatively positioned backgrounds, causing the top
+image to repeat on certain sizes. In this style, we do not need our script to strech the
+vscrollerbarbeg, so we can fix the problem by forcing the size using CSS with an !important decleration: */
+width: 10px !important;
+}
+
+.hscrollerbaseend {
+/* Right image holder for horizontal scrollbar */
+background: url(../img/scrollbar_arrows.png) -10px -5px no-repeat;
+height: 10px;
+width: 10px;
+}

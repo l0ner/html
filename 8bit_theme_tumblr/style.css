@@ -1,0 +1,176 @@
+ /* Main Things */
+         body {
+            background: #000 url('http://static.tumblr.com/hwsfayd/maLlnt68m/bg_lines.png') fixed;
+            display: block;
+            margin: 0;
+            padding: 0;
+         }
+         #wrapper {
+            width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+         }
+         ul, ol {
+            list-style: none;
+         }
+         a {
+            color: #f00;
+            text-decoration: underline;
+         }
+         .inlineblock {
+            display: -moz-inline-stack;
+            display: inline-block;
+            *display: inline;
+         }
+
+         /* Side Bar */
+         .stripeheader {
+            background: url('http://static.tumblr.com/hwsfayd/IU0lnt6cd/nav_h3_bg.png') repeat-x;
+            margin-top: 10px;
+            padding-top: 11px;
+         }
+         .sidebar {
+            font-family: AmigaForeverRegular;
+            font-size: 8px;
+            clear: both;
+         }
+         #sidebar {
+            width: 300px;
+            position: fixed;
+            float: left;
+            font-family: PressStart2PRegular;
+            color: #fff;
+            text-align: center;
+         }
+         #sidebar h1 {
+            color: #f00;
+            font-size: 32px;
+            text-align: center;
+            letter-spacing: -5px;
+            margin-bottom: 0px;
+         }
+         #sidebar h1 a {
+            text-decoration: none;
+         }
+         #sidebar h3 {
+            text-align: left;
+            font-size: 16px;
+            padding-left: 20px;
+            margin: 0;
+         }
+         #sidebar img {
+            border: 0px;
+         }
+         #about {
+            padding: 5px;
+            text-align: justify;
+         }
+         #about img {
+            float: left;
+            clear: left;
+            padding: 0px 3px 0px 0px;
+         }
+         #about p {
+            margin: 0px;
+         }
+         #buttons img {
+            margin: 2px;
+         }
+         #search input {
+            background: #000;
+            color: #fff;
+            font-family: AmigaForeverRegular;
+            font-size: 8px;
+            border: 2px solid #fff;
+            margin: 0 1px;
+         }
+         #pages ul {
+            margin: 0px;
+            padding: 0 0 0 8px;
+            font-size: 8px;
+         }
+         #pages li {
+            background: url('http://static.tumblr.com/hwsfayd/1vAlnt687/arrow.png') no-repeat;
+            background-position: 0px 1px;
+            padding-left: 10px;
+            margin-top: 5px;
+            border-bottom: 2px dashed #400;
+            text-align: left;
+         }
+         #pages a {
+            text-decoration: none;
+         }
+         #credits {
+            background: url('http://static.tumblr.com/hwsfayd/IU0lnt6cd/nav_h3_bg.png') repeat-x;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 10px;
+            color: #444;
+            font-size: 8px;
+         }
+         #credits a {
+            color: #600;
+         }
+
+         /* Main wrapper */
+         #main {
+            float: right;
+            font-family: AmigaForeverRegular;
+            font-size: 8px;
+            width: 690px;
+            height: 100%;
+            padding: 20px 0;
+            overflow: hidden;
+            color: #fff;
+         }
+
+         /* text post */
+         #post_heading {
+            background: url('http://static.tumblr.com/hwsfayd/rYrlnt6bf/heading_bg.png') repeat-x;
+            padding-top: 8px;
+            width: 100%;
+         }
+         #title {
+            float: left;
+            width: 390px;
+         }
+         #meta {
+            float: right;
+            text-align: right;
+            width: 300px;
+         }
+         .post_content {
+            background: url('http://static.tumblr.com/hwsfayd/rYrlnt6bf/heading_bg.png') repeat-x;
+            padding-top: 4px;
+         }
+         .post_content p {
+            margin-top: 2px;
+         }
+         .quote {
+            font-size: 16px;
+            text-align: right;
+            margin-top: 10px;
+         }
+         .post {
+            margin-bottom: 20px;
+         }
+         .exif {
+            text-align: right;
+         }
+         .photo_post {
+            text-align: center;
+         }
+         .photo_post img {
+            border: 0px;
+         }
+         .link_post {
+            font-size: 16px;
+            text-align: center;
+            margin-top: 2px;
+            margin-bottom: 8px;
+         }
+         .chat_post {
+            padding-top: 10px;
+            padding-left: 10px;
+         }
