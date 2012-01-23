@@ -27,12 +27,7 @@ body {
 	font-size: 13px;
 }
 
-#site_title h1 a {
-	font-size: 30px;
-	text-decoration: none;
-	line-height: 0.9em;
-	font-weight: bold;
-}
+
 
 h1 { font-size: 38px; font-weight: normal; }
 h2 { font-size: 28px; font-weight: normal; }
@@ -92,16 +87,22 @@ div#header {
 	margin-top: 4px;
 }
 
-#site_title h1 {
-	margin: 0;
-	padding: 0;
-}
-
 img#logo {
 	width: 85px;
 	float: left;
 	margin-right: 5px;
 }
+
+#logo_txt {
+	font-size: 30px;
+	text-decoration: none;
+	line-height: 0.9em;
+	font-weight: bold;
+}
+
+#site_title a {
+	color: #494949;
+	}
 
 		/* menu */
 #menu {
@@ -211,3 +212,6 @@ div.navbox {
 	text-align: center;
 }
 
+.floatleft {
+	float: left;
+	}
