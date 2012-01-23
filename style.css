@@ -106,6 +106,7 @@ img#logo {
 h1#logo {
 	font-size: 16px;
 	font-weight: bold;
+	float: left;
 	}
 
 		/* menu */
