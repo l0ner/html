@@ -1,0 +1,47 @@
+body {
+  background: #ffffff;
+}
+
+div {
+  border: 0px #000 dashed;
+}
+
+#main {
+  margin: auto;
+  width: 900px;
+}
+
+#logo {
+  background: #CCFFFF;
+  height: 200px;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+#menu1 {
+  background: #C0C0C0;
+  width: 200px;
+  height: 500px;
+}
+
+#menu2 {
+  background: #00FF00;
+  width: 200px;
+  height: 500px;
+}
+
+#content {
+  background: #FF0000;
+  width: 500px;
+  height: 500px;
+}
+
+#footer {
+  clear: both;
+}
